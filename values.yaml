@@ -1,0 +1,21 @@
+jaeger:
+  provisionDataStore:
+    cassandra: false
+    elasticsearch: false
+  spark:
+    enabled: false
+  # storage: 
+  #   type: kafka
+  #   kafka:
+  #     brokers:
+  #       - sumer-kafka-bootstrap.kafka:9092
+  #     topic: jaeger-test
+  #     authentication: none
+  storage:
+    type: kafka
+    kafka:
+      brokers:
+        - sumer-kafka-brokers.kafka:9091
+      topic: jaeger-test
+      authentication: none
+      extraEnv: []
